@@ -1697,34 +1697,7 @@
         }
     });
 
-
-    /************************************
-        Exposing Moment
-    ************************************/
-
-
-    // CommonJS module is defined
-    if (hasModule) {
-        module.exports = moment;
-    }
-    /*global ender:false */
-    if (typeof ender === 'undefined') {
-        // here, `this` means `window` in the browser, or `global` on the server
-        // add `moment` as a global object via a string identifier,
-        // for Closure Compiler "advanced" mode
-        this['moment'] = moment;
-    }
-    /*global define:false */
-    if (typeof define === "function" && define.amd) {
-        define("moment", [], function () {
-            return moment;
-        });
-    }
-}).call(this);
-
-(function(){
-    function onload (moment) {
-(function(){
+    (function(){
 // moment.js language configuration
 // language : Moroccan Arabic (ar-ma)
 // author : ElFadili Yassine : https://github.com/ElFadiliY
@@ -2127,7 +2100,32 @@ moment.lang('cs', {
         var i, _monthsParse = [];
         for (i = 0; i < 12; i++) {
             // use custom parser to solve problem with July (červenec)
-            _monthsParse[i] = new RegExp('^' + months[i] + '$|^' + monthsShort[i] + '$', 'i');
+            _monthsParse[i] = new RegExp('^' + months[i] + '$|^' + monthsShort[i] + '
+
+    /************************************
+        Exposing Moment
+    ************************************/
+
+
+    // CommonJS module is defined
+    if (hasModule) {
+        module.exports = moment;
+    }
+    /*global ender:false */
+    if (typeof ender === 'undefined') {
+        // here, `this` means `window` in the browser, or `global` on the server
+        // add `moment` as a global object via a string identifier,
+        // for Closure Compiler "advanced" mode
+        this['moment'] = moment;
+    }
+    /*global define:false */
+    if (typeof define === "function" && define.amd) {
+        define("moment", [], function () {
+            return moment;
+        });
+    }
+}).call(this);
+, 'i');
         }
         return _monthsParse;
     }(months, monthsShort)),
@@ -4577,7 +4575,32 @@ moment.lang('sk', {
         var i, _monthsParse = [];
         for (i = 0; i < 12; i++) {
             // use custom parser to solve problem with July (červenec)
-            _monthsParse[i] = new RegExp('^' + months[i] + '$|^' + monthsShort[i] + '$', 'i');
+            _monthsParse[i] = new RegExp('^' + months[i] + '$|^' + monthsShort[i] + '
+
+    /************************************
+        Exposing Moment
+    ************************************/
+
+
+    // CommonJS module is defined
+    if (hasModule) {
+        module.exports = moment;
+    }
+    /*global ender:false */
+    if (typeof ender === 'undefined') {
+        // here, `this` means `window` in the browser, or `global` on the server
+        // add `moment` as a global object via a string identifier,
+        // for Closure Compiler "advanced" mode
+        this['moment'] = moment;
+    }
+    /*global define:false */
+    if (typeof define === "function" && define.amd) {
+        define("moment", [], function () {
+            return moment;
+        });
+    }
+}).call(this);
+, 'i');
         }
         return _monthsParse;
     }(months, monthsShort)),
@@ -5403,12 +5426,31 @@ moment.lang('zh-tw', {
         yy : "%d年"
     }
 });
-})();
 
 moment.lang('en');
-
-    }
-    if (typeof window !== "undefined" && window.moment) {
-        onload(window.moment);
-    }
 })();
+
+
+    /************************************
+        Exposing Moment
+    ************************************/
+
+
+    // CommonJS module is defined
+    if (hasModule) {
+        module.exports = moment;
+    }
+    /*global ender:false */
+    if (typeof ender === 'undefined') {
+        // here, `this` means `window` in the browser, or `global` on the server
+        // add `moment` as a global object via a string identifier,
+        // for Closure Compiler "advanced" mode
+        this['moment'] = moment;
+    }
+    /*global define:false */
+    if (typeof define === "function" && define.amd) {
+        define("moment", [], function () {
+            return moment;
+        });
+    }
+}).call(this);
